@@ -1,475 +1,496 @@
-1. What is the main goal of container orchestration?
-   - A) Minimizing cloud storage costs
-   - B) Automating container deployment and management
-   - C) Reducing the number of containers in use
-   - D) Increasing manual intervention in container management
----
-2. Which platform is primarily associated with container orchestration?
+1. What defines Container Orchestration in cloud computing?
+   - A) Manual container management
+   - B) Automated deployment, scaling, and networking of containers
+   - C) Solely load balancing
+   - D) Only for local systems
+
+2. Which platform is not associated with container orchestration?
    - A) Docker Swarm
    - B) Kubernetes
    - C) Apache Mesos
-   - D) Microsoft Azure
----
-3. What defines a Kubernetes Pod?
-   - A) A group of related Docker containers
-   - B) A single instance of a Kubernetes service
-   - C) The smallest deployable unit in Kubernetes
-   - D) A type of Kubernetes storage volume
----
-4. What is the purpose of a Kubernetes Service?
-   - A) To automate image building and versioning
-   - B) To provide a persistent storage solution
-   - C) To enable communication between different pods
-   - D) To manage the Kubernetes API versions
----
-5. What is the role of a Node in a Kubernetes cluster?
-   - A) To store container images
-   - B) To manage networking between containers
-   - C) To host the running containers
-   - D) To monitor container performance
----
-6. Which Kubernetes object is used to manage a set of replicas of a pod?
-   - A) Deployment
-   - B) Volume
-   - C) Service
-   - D) ConfigMap
----
-7. What is the function of the Kubernetes Scheduler?
-   - A) To distribute network traffic across containers
-   - B) To assign pods to nodes
-   - C) To encrypt sensitive data within pods
-   - D) To replicate containers across multiple nodes
----
-8. What is a typical use case for Kubernetes?
-   - A) Data encryption
-   - B) Load balancing
-   - C) Microservice architecture
-   - D) Single-sign-on authentication
----
-9. How does Kubernetes achieve high availability?
-   - A) By restricting pod communication
-   - B) By automatically replacing failed pods
-   - C) By using a single master node
-   - D) By deploying all pods on a single node
----
-10. What does the 'kubectl' command-line tool do?
-    - A) Manages Docker images
-    - B) Provides a user interface for Kubernetes
-    - C) Interacts with the Kubernetes cluster
-    - D) Monitors container performance in real-time
----
-11. What is the purpose of Kubernetes labels?
-    - A) To schedule backups
-    - B) To organize objects like pods and services
-    - C) To define network policies
-    - D) To create new container images
----
-12. What type of Kubernetes object is a 'Service'?
-    - A) A storage unit
-    - B) A networking rule
-    - C) An access control policy
-    - D) An abstraction to access pods
----
-13. How does Kubernetes handle service discovery?
-    - A) Through manual configuration
-    - B) Using a centralized service directory
-    - C) With DNS-based discovery
-    - D) By assigning public IP addresses to each service
----
-14. What is a Kubernetes ClusterIP service?
-    - A) An external load balancer
-    - B) An internal endpoint for cluster communication
-    - C) A public-facing service endpoint
-    - D) A private Docker registry
----
-15. What enables communication between Kubernetes clusters?
-    - A) ClusterIP services
-    - B) External databases
-    - C) NodePort services
-    - D) Ingress controllers
----
-16. What is a characteristic of a Kubernetes NodePort service?
-    - A) Exposes a service to internal traffic only
-    - B) Automatically scales the service based on traffic
-    - C) Exposes the service on a static port on each node
-    - D) Provides encrypted connections to the service
----
-17. What is the primary use of a Kubernetes Deployment?
-    - A) Managing stateful applications
-    - B) Providing persistent storage
-    - C) Automating the deployment and scaling of pods
-    - D) Balancing network traffic
----
-18. What is the Kubernetes Control Plane responsible for?
-    - A) Running application containers
-    - B) Directly handling external traffic
-    - C) Managing cluster state and configuration
-    - D) Storing container images
----
-19. In Kubernetes, what is a pod's lifecycle managed by?
-    - A) A Deployment or ReplicaSet
-    - B) A StatefulSet
-    - C) A DaemonSet
-    - D) A Service
----
-20. What does the Kubernetes command 'kubectl scale' do?
-    - A) Changes the number of cluster nodes
-    - B- Increases the number of pod replicas
-    - C) Adjusts the number of active pods for a deployment
-    - D) Updates the Kubernetes API version
----
-21. How are Kubernetes Services different from Kubernetes Deployments?
-    - A) Services provide a persistent storage interface
-    - B) Services abstract pod access by a consistent name and port
-    - C) Deployments automate image builds
-    - D) Deployments offer external network access
----
-22. What does 'kubectl delete' command achieve?
-    - A) Updates a pod's configuration
-    - B) Removes specified resources from the cluster
-    - C) Restarts a stopped pod
-    - D) Scales down a deployment
----
-23. How does Kubernetes' self-healing mechanism work?
-    - A) By manually restarting failed containers
-    - B) By automatically replacing failed pods
-    - C) Through user intervention
-    - D) Using external monitoring tools
----
-24. What role does the etcd component play in Kubernetes?
-    - A) Load balancing
-    - B) Data encryption
-    - C) Stores cluster state and configuration
-    - D) Manages network policies
----
-25. How does Kubernetes' automatic bin packing feature function?
-    - A) Prioritizes bin storage
-    - B) Allocates resources based on container needs
-    - C) Packs containers into the smallest possible space
-    - D) Automatically deletes unused bins
----
-26. What distinguishes Kubernetes node types?
-    - A) Their physical location
-    - B) Their roles within the cluster (Master vs. Worker)
-    - C) The type of pods they can host
-    - D) The operating system they run
----
-27. What is a Kubernetes ReplicaSet primarily used for?
-    - A) Managing network traffic
-    - B) Ensuring a specified number of pod replicas are running
-    - C) Replicating databases
-    - D) Copying files between pods
----
-28. What is Kubernetes Volume used for?
-    - A) Storing sensitive data
-    - B) Providing a temporary storage area for pods
-    - C) Providing persistent storage for pods
-    - D) Increasing the memory available to pods
----
-29. How does a Kubernetes LoadBalancer Service operate?
-    - A) By redirecting traffic to avoid overload
-    - B) By distributing incoming network traffic across multiple pods
-    - C) By balancing computational load across nodes
-    - D) By limiting the rate of network requests
----
-30. What is the primary purpose of Kubernetes Namespaces?
-    - A) To provide additional security
-    - B) To manage different environments within the same cluster
-    - C) To increase the number of available pods
-    - D) To offer load balancing services
----
-31. What feature does Kubernetes offer for update rollbacks?
-    - A) Manual pod replacement
-    - B) Automated rollouts and rollbacks
-    - C) Instantaneous update application
-    - D) Update pause and resume
----
-32. What does a Kubernetes Service 'ClusterIP' provide?
-    - A) A permanent IP address for each node
-    - B) A static IP address for external access
-    - C) An internal IP address accessible within the cluster
-    - D) A dynamic IP address assigned to each service
----
-33. What is the main purpose of the Kubernetes Kube-proxy component?
-    - A) To proxy the Kubernetes API server
-    - B) To manage container runtime environments
-    - C) To forward requests to the appropriate container
-    - D) To encrypt container data
----
-34. How do Labels and Selectors improve Kubernetes resource management?
-    - A) By facilitating manual resource allocation
-    - B) By enabling efficient and precise resource grouping
-    - C) By limiting the number of resources used
-    - D) By automatically generating resource labels
----
-35. What is the typical content of a Kubernetes YAML file for deployment?
-    - A) Cluster configuration settings
-    - B) Image registry credentials
-    - C) Specifications for creating pods and services
-    - D) Network policy definitions
+   - D) Microsoft Excel
 
----
-36. What command in Kubernetes is used to set the default compute region and zone for GKE?
-   - A) gcloud config set compute/region
-   - B) kubectl set region
-   - C) gcloud set compute/zone
-   - D) kubectl config set region
----
-37. Which Kubernetes object is necessary for deploying a scalable and maintainable application?
-   - A) Pod
-   - B) ReplicaSet
-   - C) Deployment
+3. What is the smallest deployable unit in Kubernetes?
+   - A) Node
+   - B) Cluster
+   - C) Pod
    - D) Service
----
-38. What does the Kubernetes Deployment manage?
-   - A) Database transactions
-   - B) The network traffic
-   - C) Pod creation, deletion, and updates
-   - D) Cloud storage solutions
----
-39. In Kubernetes, what is a NodePort service primarily used for?
-   - A) Internal cluster communication
-   - B) Exposing a service to external traffic
-   - C) Load balancing within the cluster
-   - D) Connecting pods across clusters
----
-40. What feature of Kubernetes allows for automatic scaling of pods based on resource usage?
-   - A) Horizontal Pod Autoscaler
-   - B) Vertical Pod Autoscaler
-   - C) Pod Lifecycle Manager
-   - D) Resource Limit Controller
----
-41. How do you expose a Kubernetes application to the internet?
-   - A) Using a NodePort service
-   - B) By creating a Deployment
-   - C) Through a ClusterIP service
-   - D) By deploying a Pod directly
----
-42. What is the role of etcd in a Kubernetes cluster?
-   - A) Data encryption
+
+4. Kubernetes Services are not used for:
+   - A) Exposing applications
    - B) Load balancing
-   - C) Store cluster state and configuration
-   - D) Network routing
----
-43. What type of service in Kubernetes assigns a unique IP address to each pod?
+   - C) Automated scaling
+   - D) Internal communication
+
+5. What does a Kubernetes Node not do?
+   - A) Host applications
+   - B) Scale automatically
+   - C) Run Pods
+   - D) Manage networking
+
+6. What is not a feature of Kubernetes?
+   - A) Automated rollouts
+   - B) Intrinsic data encryption
+   - C) Self-healing
+   - D) Service discovery
+
+7. The primary role of etcd in Kubernetes is:
+   - A) Load balancing
+   - B) Data storage for cluster state
+   - C) Managing network policies
+   - D) Directing traffic to pods
+
+8. Kubernetes' scheduling of pods is based on:
+   - A) Random allocation
+   - B) Fixed assignments
+   - C) Resource requirements
+   - D) Alphabetical ordering
+
+9. In Kubernetes, a Service does not:
+   - A) Assign DNS names to pods
+   - B) Balance load across pods
+   - C) Automatically update application versions
+   - D) Enable communication between pods
+
+10. Labels in Kubernetes are used for all except:
+    - A) Organizing resources
+    - B) Assisting with storage provisioning
+    - C) Selecting subsets of objects
+    - D) Managing resource allocation
+
+11. Kubernetes Pods share:
+    - A) Different IP addresses
+    - B) The same lifecycle
+    - C) Independent storage volumes
+    - D) Network namespaces
+
+12. The default service type in Kubernetes is:
+    - A) NodePort
+    - B) LoadBalancer
+    - C) ClusterIP
+    - D) ExternalName
+
+13. Kubernetes Services provide all except:
+    - A) Persistent storage
+    - B) A consistent endpoint for pod access
+    - C) Load balancing
+    - D) Service discovery
+
+14. What does not describe a Kubernetes ClusterIP service?
+    - A) Exposes the service externally
+    - B) Accessible within the cluster
+    - C) Assigns a unique internal IP address
+    - D) Used for internal communication
+
+15. Kubernetes NodePort service is not characterized by:
+    - A) Exposing a service externally
+    - B) Assigning a unique port across all nodes
+    - C) Only operating within the cluster
+    - D) Allowing external traffic access
+
+16. A Kubernetes LoadBalancer service does not:
+    - A) Create an external load balancer
+    - B) Assign a fixed external IP
+    - C) Restrict access to within the cluster
+    - D) Distribute external traffic efficiently
+
+17. Kubernetes DNS-based service discovery does not:
+    - A) Assign unique DNS names to services
+    - B) Change DNS names frequently
+    - C) Allow internal communication via consistent names
+    - D) Simplify service interconnectivity
+
+18. Kubernetes namespaces are not used for:
+    - A) Increasing computing power
+    - B) Separating cluster resources between teams
+    - C) Organizing objects
+    - D) Enabling multiple environments
+
+19. In Kubernetes, a ReplicaSet does not:
+    - A) Ensure a certain number of pods run
+    - B) Load balance between pods
+    - C) Replace failed pods
+    - D) Manage pod replicas
+
+20. A Deployment in Kubernetes does not:
+    - A) Directly handle low-level networking
+    - B) Manage pod versions and replicas
+    - C) Provide declarative updates
+    - D) Enable rollbacks
+
+21. Kubernetes' Horizontal Pod Autoscaler does not:
+    - A) Scale pods based on CPU usage
+    - B) Automatically update images
+    - C) Adjust the number of pod replicas
+    - D) Respond to resource demand
+
+22. Kubernetes persistent volumes do not:
+    - A) Provide temporary storage
+    - B) Persist data beyond pod lifecycle
+    - C) Support multiple storage backends
+    - D) Integrate with externalstorage configurations
+    - D) Automatically create data backups
+
+23. In Kubernetes, Service Discovery is primarily facilitated by:
+    - A) Manual IP address management
+    - B) Hard-coding Pod IP addresses
+    - C) DNS-based service discovery
+    - D) Using environment variables for service endpoints
+
+24. Kubernetes' main approach to deployment strategy does not include:
+    - A) Rolling updates
+    - B) Blue-green deployment by default
+    - C) Canary deployments
+    - D) Immediate replacement
+
+25. The primary use of Kubernetes Ingress is not:
+    - A) Load balancing internal traffic
+    - B) Managing external access to services
+    - C) Routing HTTP traffic
+    - D) Providing network security
+
+26. Kubernetes ConfigMaps are typically not used for:
+    - A) Storing database credentials
+    - B) Running stateful applications
+    - C) Configuring application settings
+    - D) Supplying environment variables
+
+27. Kubernetes' automatic bin packing feature does not:
+    - A) Optimize resource usage based on requirements
+    - B) Prioritize pods based on resource needs
+    - C) Allocate resources arbitrarily
+    - D) Ensure efficient use of node resources
+
+28. A Kubernetes Secret is not intended for:
+    - A) Encrypting data at rest
+    - B) Storing sensitive information, such as passwords
+    - C) Exposing confidential data to unauthorized users
+    - D) Integrating with containerized applications
+
+29. What is not a standard practice for Kubernetes label usage?
+    - A) Using labels to indicate deployment environments
+    - B) Labeling resources for organizational purposes
+    - C) Utilizing labels for storage allocation
+    - D) Applying labels to filter resources during selection
+
+30. Kubernetes' self-healing mechanism does not include:
+    - A) Automatically replacing failed nodes
+    - B) Restarting containers that fail health checks
+    - C) Moving workloads to healthy nodes
+    - D) Ignoring pod failures
+
+31. The Kubernetes Scheduler does not:
+    - A) Allocate pods to nodes with insufficient resources
+    - B) Schedule pods based on resource availability
+    - C) Ensure that pods are placed on appropriate nodes
+    - D) Balance pod distribution across the cluster
+
+32. Kubernetes Volumes do not:
+    - A) Persist data after pod deletion
+    - B) Share data between multiple containers in a pod
+    - C) Store configuration files and secrets
+    - D) Enhance the network bandwidth of pods
+
+33. Horizontal Pod Autoscaling in Kubernetes does not respond to:
+    - A) Changes in memory usage
+    - B) CPU load increases
+    - C) Decrease in network traffic
+    - D) Specific custom metrics thresholds
+
+34. Kubernetes Labels are not:
+    - A) Immutable once set on an object
+    - B) Key-value pairs used for organization
+    - C) Utilized for selecting subsets of objects
+    - D) Mandatory for all Kubernetes objects
+
+35. A Kubernetes Deployment does not:
+    - A) Guarantee stateful application consistency
+    - B) Enable declarative updates for pods and replicasets
+    - C) Support automated rollbacks
+    - D) Directly manage hardware level settings
+
+36. What component in Kubernetes acts as the front-end for the control plane?
+   - A) Kubelet
+   - B) etcd
+   - C) API Server
+   - D) Controller Manager
+
+37. What is the primary role of etcd in a Kubernetes cluster?
+   - A) Service discovery
+   - B) Data storage for cluster state
+   - C) Load balancing
+   - D) Managing container runtime
+
+38. Which Kubernetes component is responsible for scheduling pods?
+   - A) API Server
+   - B) Scheduler
+   - C) Kubelet
+   - D) etcd
+
+39. What describes the Controller Manager's function in Kubernetes?
+   - A) Manages network traffic
+   - B) Handles routine tasks within the cluster
+   - C) Stores sensitive information
+   - D) Schedules pods on nodes
+
+40. In Kubernetes, what does Kubelet do?
+   - A) Provides cluster-wide DNS
+   - B) Manages a node's containers
+   - C) Balances network traffic
+   - D) Stores cluster configuration
+
+41. What is the primary function of kube-proxy in a Kubernetes environment?
+   - A) Data encryption
+   - B) Managing deployments
+   - C) Network proxy on each node
+   - D) Monitoring container health
+
+42. Which type of Kubernetes object is used for deploying stateful applications?
+   - A) Deployment
+   - B) Service
+   - C) StatefulSet
+   - D) ConfigMap
+
+43. How are Kubernetes pods typically defined and deployed?
+   - A) Through Docker Compose files
+   - B) Using imperative commands only
+   - C) Via YAML or JSON manifest files
+   - D) Directly through the Docker CLI
+
+44. What Kubernetes concept allows you to update applications without downtime?
+   - A) Persistent volumes
+   - B) Rolling updates
+   - C) Pod affinity
+   - D) Node selectors
+
+45. How do Kubernetes services enable communication between different pods?
+   - A) By defining storage requirements
+   - B) Through label selectors
+   - C) By assigning each pod a public IP address
+   - D) Using API versioning
+
+46. What is not a type of service in Kubernetes?
+   - A) ClusterIP
+   - B) NodeBalancer
+   - C) LoadBalancer
+   - D) NodePort
+
+47. What feature of Kubernetes allows automatic scaling of pods based on CPU usage?
+   - A) Kube-scheduler
+   - B) AutoScaler
+   - C) Horizontal Pod Autoscaler
+   - D) Vertical Pod Autoscaler
+
+48. In Kubernetes, what is a ClusterIP?
+   - A) An external IP address for accessing the cluster
+   - B) A service that exposes a pod to the cluster internally
+   - C) A specific type of pod deployment
+   - D) The IP address of the master node
+
+49. What is the function of a Kubernetes NodePort service?
+   - A) Assigns a specific port on each node to access a service
+   - B) Automatically configures a cloud load balancer
+   - C) Creates a private, internal-only IP address
+   - D) Schedules pods across different nodes
+
+50. Which Kubernetes component is used for automated rollouts and rollbacks of applications?
+   - A) Deployment
+   - B) Service
+   - C) Volume
+   - D) Ingress
+
+51. What Kubernetes resource is used to manage external access to the services within a cluster?
+   - A) Ingress
+   - B) Endpoint
+   - C) ClusterIP
+   - D) Egress
+
+52. How is data persisted across pod restarts in Kubernetes?
+   - A) Through stateful sets
+   - B) Using persistent volumes
+   - C) By saving data in container layer
+   - D) Through Kubernetes secrets
+
+53. Which command is used to fetch the list of nodes in a Kubernetes cluster?
+   - A) kubectl get pods
+   - B) kubectl list nodes
+   - C) kubectl get nodes
+   - D) kubectl nodes show
+
+54. What is not a recommended best practice for Kubernetes labels?
+   - A) Using a clear and consistent labeling scheme
+   - B) Over-labeling resources for detailed tracking
+   - C) Utilizing labels for affinity and anti-affinity
+   - D) Applying labels for efficient resource allocation
+
+55. In Kubernetes, what is the default machine type for a cluster created in Autopilot mode?
+   - A) e2-highcpu
+   - B) e2-standard
+   - C) e2-medium
+   - D) n1-standard
+
+56. What command sets the default compute```markdown
+56. What command sets the default compute region in GKE?
+   - A) gcloud config set compute/zone
+   - B) kubectl set region
+   - C) gcloud config set compute/region
+   - D) kube-region set compute
+
+57. What is the purpose of deploying a multi-container Pod in Kubernetes?
+   - A) To increase the cluster size
+   - B) For running unrelated applications together
+   - C) To support co-located, co-managed helper containers
+   - D) To reduce the number of services
+
+58. How is a new Kubernetes cluster created in GKE using the command line?
+   - A) kubectl create cluster
+   - B) gcloud container clusters create
+   - C) gcloud services enable Kubernetes
+   - D) kube-init start cluster
+
+59. What is NOT a function of a Kubernetes Deployment?
+   - A) Rolling back to an earlier version
+   - B) Automatic bin packing
+   - C) Managing a set of pods
+   - D) Updating pods with a new image
+
+60. What type of Kubernetes service allows external traffic to reach your cluster?
    - A) ClusterIP
    - B) NodePort
-   - C) LoadBalancer
-   - D) ExternalName
----
-44. What Kubernetes resource is used to manage the lifecycle of a set of pods?
-   - A) Service
-   - B) Deployment
-   - C) Volume
-   - D) Namespace
----
-45. How is a new Kubernetes cluster created in GKE?
-   - A) gcloud container clusters create
-   - B) kubectl create cluster
-   - C) gcloud create gke-cluster
-   - D) kubectl gke deploy
----
-46. Which file type is commonly used for Kubernetes object specifications?
-   - A) JSON
-   - B) XML
-   - C) YAML
-   - D) HTML
----
-47. What command is used to obtain cluster credentials in GKE?
-   - A) gcloud container clusters get-credentials
-   - B) kubectl get-credentials
-   - C) gcloud get gke-credentials
-   - D) kubectl access gke
----
-48. What is the main advantage of using Kubernetes Autopilot mode in GKE?
-   - A) Manual node management
-   - B) Automated cluster and resources management
-   - C) Direct access to physical servers
-   - D) Fixed pricing
----
-49. How can you scale a deployment in Kubernetes?
-   - A) kubectl scale
-   - B) kubectl resize
-   - C) kubectl deploy-scale
-   - D) kubectl modify
----
-50. What command is used to apply changes to a Kubernetes deployment?
-   - A) kubectl apply
-   - B) kubectl update
-   - C) kubectl refresh
-   - D) kubectl commit
----
-51. What Kubernetes concept allows you to run multiple clusters within the same physical infrastructure?
-   - A) Virtual Nodes
-   - B) Namespaces
-   - C) Multi-Clusters
-   - D) Cluster Groups
----
-52. In Kubernetes, how are updates to Pods typically managed?
-   - A) By directly updating each Pod
-   - B) Through ReplicaSets
-   - C) Using Deployment updates
-   - D) With direct Pod replacement
----
-53. What Kubernetes command is used to list all services in the cluster?
-   - A) kubectl get services
-   - B) kubectl list all-services
-   - C) kubectl display services
-   - D) kubectl services all
----
-54. What is the primary function of the Kube-proxy in a Kubernetes cluster?
-   - A) Data encryption
-   - B) Monitoring resource usage
-   - C) Handling network traffic routing
-   - D) Managing pod lifecycle
----
-55. How does Kubernetes provide high availability for applications?
-   - A) Through manual intervention
-   - B) By using a single, highly available node
-   - C) Automatically replicating pods across multiple nodes
-   - D) Through dedicated hardware
----
+   - C) InternalName
+   - D) LoadBalancer
 
-56. Which component is responsible for container orchestration within Kubernetes?
-   - A) Docker
-   - B) Kubelet
-   - C) Kube-scheduler
-   - D) Kube-proxy
----
-57. What is the purpose of the Kubernetes API server?
-   - A) To store data
-   - B) To schedule pods
-   - C) To serve the Kubernetes API
-   - D) To manage network traffic
----
-58. Which type of Kubernetes object can be used to manage a set of identical pods?
-   - A) Service
-   - B) Deployment
-   - C) Volume
-   - D) Namespace
----
-59. What is the primary function of the kubelet?
-   - A) Providing a user interface
-   - B) Managing the node's containers
-   - C) Load balancing
-   - D) Network routing
----
-60. What does Kubernetes use to automatically place pods onto nodes?
-   - A) Labels
-   - B) Selectors
+61. How do Kubernetes labels assist in the management of resources?
+   - A) By encrypting data stored within resources
+   - B) By categorizing resources for easier querying and management
+   - C) By increasing the computational power of resources
+   - D) By automatically scaling resources up and down
+
+62. In Kubernetes, what does the 'RollingUpdate' strategy imply?
+   - A) Immediate replacement of all pods
+   - B) Sequential update of pods without downtime
+   - C) Update all pods simultaneously causing downtime
+   - D) Scaling down all pods before updating
+
+63. What is the purpose of a Kubernetes Secret?
+   - A) Scheduling pods on nodes
+   - B) Storing sensitive information like passwords
+   - C) Exposing a service to the internet
+   - D) Managing storage for pods
+
+64. What defines a 'Readiness Probe' in Kubernetes?
+   - A) Checks if a container is ready to handle requests
+   - B) Verifies the container's deployment status
+   - C) Confirms the node's health and availability
+   - D) Ensures data encryption within pods
+
+65. What is not recommended when creating Kubernetes labels?
+   - A) Using concise and descriptive labels
+   - B) Applying too many labels to a single resource
+   - C) Labeling resources based on their environment
+   - D) Using labels to denote log levels
+
+66. How can you manually scale a deployment in Kubernetes?
+   - A) Adjusting the CPU limits
+   - B) Modifying the deployment's replica count
+   - C) Changing the image version
+   - D) Editing the service type
+
+67. What is not a standard field in a Kubernetes YAML file for a Pod?
+   - A) apiVersion
+   - B) kind
+   - C) replicas
+   - D) metadata
+
+68. Which component is not part of a Kubernetes Node?
+   - A) Kubelet
+   - B) Docker
    - C) Scheduler
-   - D) Replicas
----
-61. Which Kubernetes object is used to expose a pod to the network?
-   - A) ReplicaSet
-   - B) Deployment
-   - C) Service
-   - D) Volume
----
-62. What does the 'kubectl create' command do?
-   - A) Removes resources
-   - B) Lists resources
-   - C) Creates resources
-   - D) Updates resources
----
-63. What feature does Kubernetes provide for managing application configurations?
-   - A) Pods
-   - B) Deployments
-   - C) ConfigMaps
-   - D) StatefulSets
----
-64. How does Kubernetes achieve fault tolerance?
-   - A) By using a single, highly-available master node
-   - B) Through manual intervention
-   - C) By replicating services across multiple nodes
-   - D) By restricting access to the cluster
----
-65. In Kubernetes, what is a namespace used for?
-   - A) To combine services
-   - B) To manage different environments within the same cluster
-   - C) To increase pod capacity
-   - D) To link different clusters
----
-66. How does Kubernetes monitor the health of applications?
-   - A) Through external tools only
-   - B) By using the kubectl health command
-   - C) With liveness and readiness probes
-   - D) By manual checking
----
-67. What is the primary purpose of a Kubernetes Ingress?
-   - A) To encrypt data
-   - B) To automate deployments
-   - C) To manage external access to the services
-   - D) To monitor container performance
----
-68. What command is used to view the logs of a Kubernetes pod?
-   - A) kubectl logs
-   - B) kubectl view
-   - C) kubectl inspect
-   - D) kubectl check
----
-69. How can Kubernetes applications be scaled?
-   - A) By changing the pod specifications
-   - B) Using the kubectl scale command
-   - C) By manually increasing the number of nodes
-   - D) Through direct pod replication
----
-70. What strategy does Kubernetes use to update applications?
-   - A) Manual replacement of pods
-   - B) Direct pod editing
-   - C) Rolling updates
-   - D) Stopping and restarting all pods
+   - D) Kube-proxy
 
+69. What is the primary use of NodePort in Kubernetes?
+   - A) Allocating storage to nodes
+   - B) Assigning a specific port on each node to access a service
+   - C) Distributing nodes across different zones
+   - D) Encrypting data transmitted between nodes
+
+70. In Kubernetes, what is the role of the 'Controller Manager'?
+   - A) Assigning IP addresses to services
+   - B) Managing the lifecycle of pods
+   - C) Orchestrating container storage
+   - D) Running controller processes to regulate the state of the cluster
+
+---
+---
 
 **Answer Key:**
 1. B
-2. B
+2. D
 3. C
 4. C
-5. C
-6. A
+5. B
+6. B
 7. B
 8. C
-9. B
-10. C
-11. B
-12. D
-13. C
-14. B
+9. C
+10. B
+11. D
+12. C
+13. A
+14. A
 15. C
 16. C
-17. C
-18. C
-19. A
-20. C
+17. A
+18. B
+19. B
+20. B
 21. B
-22. B
-23. B
-24. C
-25. B
+22. C
+23. C
+24. B
+25. A
 26. B
-27. B
+27. C
 28. C
-29. B
-30. B
-31. B
-32. C
+29. C
+30. A
+31. A
+32. D
 33. C
-34. B
-35. C
-    (Sorry the rest got lost)
+34. A
+35. A
+36. C
+37. B
+38. B
+39. B
+40. B
+41. C
+42. C
+43. C
+44. B
+45. B
+46. B
+47. C
+48. B
+49. A
+50. A
+51. A
+52. B
+53. C
+54. B
+55. D
 56. C
 57. C
 58. B
 59. B
-60. C
-61. C
-62. C
-63. C
-64. C
+60. D
+61. B
+62. B
+63. B
+64. A
 65. B
-66. C
+66. B
 67. C
-68. A
+68. C
 69. B
-70. C
+70. D
