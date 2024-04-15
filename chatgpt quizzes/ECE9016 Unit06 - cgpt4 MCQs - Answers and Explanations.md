@@ -1,5 +1,5 @@
 ## WithOUT Slide Content Available
-<sub>The answers below were generated without slide content avaialable</sub>
+<sub>The answers below were generated without slide content available</sub>
 
 1. What is the minimum disk size per node specified for the cluster configuration in the GKE cluster creation?
    - **Answer: C) 20 GB**
